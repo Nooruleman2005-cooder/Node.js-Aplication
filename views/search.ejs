@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Search</title>
+</head>
+
+<body>
+  <%- include('common/header') %>
+    <div class="search-container">
+      <div class="container ">
+        <% if (topic) { %>
+          <div class="result-container">
+            <img src="<%= topic.image %>" alt="<%= topic.name %>" class="topic-img" />
+
+            <div class="topic-content">
+              <h2>
+                <%= topic.title %>
+              </h2>
+              <p>
+                <%= topic.description %>
+              </p>
+
+              <% if (topic.name==="html" ) { %>
+                <p>HTML is the foundation of every webpage. HTML5 introduced new semantic elements, form types, and
+                  media support, making it a major upgrade for modern web development.</p>
+                <% } else if (topic.name==="css" ) { %>
+                  <p>CSS3 allows you to create advanced styles, animations, and layouts. Features like Flexbox and Grid
+                    give you total control over responsive designs.</p>
+                  <% } else if (topic.name==="javascript" ) { %>
+                    <p>With JavaScript, you can build dynamic and interactive web apps. It's the backbone of client-side
+                      programming and works with DOM, APIs, and more.</p>
+                    <% } else if (topic.name==="bootstrap" ) { %>
+                      <p>Bootstrap offers a grid system and pre-built components like navbars and carousels. It speeds
+                        up development and ensures responsive behavior across devices.</p>
+                      <% } else if (topic.name==="react" ) { %>
+                        <p>React lets you break UI into reusable components. It uses a virtual DOM for faster updates,
+                          and it's widely used in SPAs and large-scale apps.</p>
+                        <% } else if (topic.name==="tailwind" ) { %>
+                          <p>Tailwind CSS gives you design freedom by using utility classes. You write fewer custom
+                            styles and can rapidly prototype without leaving your HTML.</p>
+                          <% } %>
+            </div>
+          </div>
+          <% } else { %>
+            <h3 class="text-center">No results found for your search.</h3>
+            <% } %>
+      </div>
+    </div>
+
+
+    <%- include('common/footer') %>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
