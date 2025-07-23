@@ -68,7 +68,7 @@ app.get('/search', (req, res) => {
   const topic = topics.find(item => item.name.toLocaleLowerCase() === query)
   res.render('search', { topic })
 })
-
+module.exports= app;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 })
