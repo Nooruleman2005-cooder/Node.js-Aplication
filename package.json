@@ -16,5 +16,14 @@
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nooruleman2005-cooder/Node.js-Aplication.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Nooruleman2005-cooder/Node.js-Aplication/issues"
+  },
+  "homepage": "https://github.com/Nooruleman2005-cooder/Node.js-Aplication#readme"
 }
